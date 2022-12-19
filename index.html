@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</p>
+    <pre>const parent ={
+        firstname: "Aman",
+        lastname: "kumar",
+        fullname(){
+            return (this.firstname+" "+this.lastname)
+        }
+    }
+    const child={
+        _proto_:parent
+    }
+    console.log(child.fullname());</pre>
+    <p>Write code to explain prototype chaining</p>
+    <pre>function person(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }</pre>
+    <p>Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays</p>
+    <pre>var salaries = [10000, 20000, 30000, 40000] // sums to 100000
+        var totalSalary = 0;
+        for (var i = 0; i < salaries.length; i++) {
+        totalSalary += salaries[i]
+        }
+        console.log(salaries);
+    </pre>
+
+
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
